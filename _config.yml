@@ -14,7 +14,7 @@ timezone:  Europe/Bratislava
 # Author settings
 author:
   name: Frantisek Nagy
-  bio: 3D printing, Open Source /#linux
+  bio: 3D printing <br> Open Source <br> /#linux
   picture: assets/images/avatar.png
   github: nagyfrankie # github username
 #  twitter: onepase # twitter username
