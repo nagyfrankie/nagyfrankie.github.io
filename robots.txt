@@ -1,8 +1,5 @@
 ---
-layout: null
+layout: none
 ---
-
-sitemap: {{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}
-
-user-agent: EmailCollector
-disallow: /
+User-agent: *
+Sitemap: {{ site.url }}/sitemap.xml
