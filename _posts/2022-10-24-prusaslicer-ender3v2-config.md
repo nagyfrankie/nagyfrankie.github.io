@@ -25,7 +25,7 @@ G1 Y10 E15 F1200 ; intro line
 G92 E0
 ```
 
-## End g-code
+## End g-code:
 ```
 {if max_layer_z < max_print_height}G1 Z{z_offset+min(max_layer_z+2, max_print_height)} F600 ; Move print head up{endif}
 G1 X5 Y{print_bed_max[1]*0.8} F{travel_speed*60} ; present print
