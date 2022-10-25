@@ -23,18 +23,11 @@
     </header>
     {% else %}
     <header class="header-home {% if site.animation %}animated{% endif %}">
-        {% if site.about %}
-            <a class="link" href="{{ site.url }}/about">
+            <a class="link" href="{{ site.url }}/">
                 <img class="selfie" alt="{{ site.title }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
             </a>
-        {% else %}
-            <span class="link">
-                <img class="selfie" alt="{{ site.title }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
-            </span>
-        {% endif %}
 
-        <a href="/"><h1 class="title">{{ site.title }}</h1></a>
-        <h2 class="description">{{ site.bio }}</h2>
+
 
         {% include social-links.html %}
     </header>
