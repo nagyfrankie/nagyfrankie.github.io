@@ -1,59 +1,83 @@
-title: n4.sk
+# Site settings
+site: n4.sk
+title: n4.sk - Frantisek Nagy
+keywords: nagy, blog
+description: >-
+  n4.sk - Frantisek Nagy
+lang: hu-HU
+timezone:  Europe/Bratislava
+#repo: https://github.com/onepase/Ephesus # site repo [optional]
+#google_verify:      XXX # Put your Google Verification here
+#google_analytics:   UA-XXXXXXXX-00 # Put your Google Analytics code
+#discus-identifier:  XXX
+
+# Author settings
 author:
   name: Frantisek Nagy
-  email: hello@n4.sk
-description: > # this means to ignore newlines until "show_excerpts:"
-  Even if you're not doing anything wrong, you are being watched and recorded. 'Edward Snowden'
+  bio: 3D printing <br> Open Source <br> /#linux
+  picture: assets/images/avatar.png
+  github: nagyfrankie # github username
+  twitter: nagyfrankie # twitter username
+  facebook: nfrantisek # facebook username
+#  instagram: onepase # instagram username
+#  youtube: https://www.youtube.com/channel/UCMmAto-wxBootXN91AzBiDg # youtube username
+#  linkedin: hakantorun # linkedin username
+  email: hello@n4.sk # email adress
 
-show_excerpts: true # set to true to show excerpts on the homepage
 
-# Minima date format
-# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
-minima:
-  date_format: "%b %-d, %Y"
+# URL settings
+url: "https://n4.sk" # Domain Name of host. [username].github.io for github pages
+permalink: pretty
 
-  # generate social links in footer
-  social_links:
-    twitter: nagyfrankie
-    github:  nagyfrankie
-    # devto: jekyll
-    # dribbble: jekyll
-    facebook: nfrantisek
-    # flickr:   jekyll
-    instagram: nagy_franky
-    # linkedin: jekyll
-    # pinterest: jekyll
-    # youtube: jekyll
-    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
-    # youtube_channel_name: CloudCannon
-    # telegram: jekyll
-    # googleplus: +jekyll
-    # microdotblog: jekyll
-    # keybase: jekyll
-    # google_scholar_id: qc6CJjYAAAAJ
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-    # Mastodon instances
-    # mastodon:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
 
-    # GitLab instances
-    # gitlab:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
-
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
-
-# Build settings
-theme: minima
+exclude:
+  - .jekyll-cache
+  - .obsidian
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - CONTRIBUTING.md
 
 plugins:
- - jekyll-feed
- - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-relative-links
+paginate: 20
+paginate_path: "/page/:num"
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+relative_links:
+  enabled:     true
+  collections: false
