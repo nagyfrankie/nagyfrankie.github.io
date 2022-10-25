@@ -55,7 +55,7 @@ authors:
 width: normal
 
 # if you do/don't need pagination, toggle 'enabled' between true/false below
-paginate: 5
+paginate: 2
 paginate_path: "/page:num/"
 
 
