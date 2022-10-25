@@ -9,16 +9,6 @@ pagination:
 <section class="list">
 	{% if site.posts.size == 0 %}
 		<p class="text-center">Nothing published yet!</p>
-	{% elsif site.pagination.enabled %}
-		{% for post in paginator.posts %}
-			{% if post.category == 'blog' %}
-				{% if post.hidden != true %}
-					{% include blog-post.html %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-
-		{% include pagination.html%}
 	{% else %}
 		{% for post in site.posts %}
 			{% if post.category == 'blog' %}
@@ -28,4 +18,35 @@ pagination:
 			{% endif %}
 		{% endfor %}
 	{% endif %}
+
+
+
+	<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+<div class="item {% if post.star %}star{% endif %}">
+    <a class="url" href="{{ site.url }}{{ post.url }}">
+        <aside class="date"><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>
+        <h3 class="title">{{ post.title }}</h3>
+    </a>
+</div>
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+{% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path }}" class="previous">
+	Previous
+  </a>
+{% else %}
+  <span class="previous">Previous</span>
+{% endif %}
+<span class="page_number ">
+  Page: {{ paginator.page }} of {{ paginator.total_pages }}
+</span>
+{% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+{% else %}
+  <span class="next ">Next</span>
+{% endif %}
+</div>
 </section>
