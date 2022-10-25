@@ -3,7 +3,7 @@ author:
   name: Frantisek Nagy
   email: hello@n4.sk
 description: > # this means to ignore newlines until "show_excerpts:"
-Even if you're not doing anything wrong, you are being watched and recorded. 'Edward Snowden'
+  Even if you're not doing anything wrong, you are being watched and recorded. 'Edward Snowden'
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
