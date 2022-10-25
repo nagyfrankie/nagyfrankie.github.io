@@ -1,6 +1,6 @@
 # main text of home
 title: Frantisek Nagy
-bio: A Person who travels the world eating noodles
+bio: A blog about technology and stuff related
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -56,7 +56,7 @@ width: normal
 
 # if you do/don't need pagination, toggle 'enabled' between true/false below
 pagination:
-  enabled: false
+  enabled: true
   sort_reverse: true # display recent posts first
   title: ":title" # Changing this will mess up the header display logic
   per_page: 5
@@ -102,7 +102,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
-  - jekyll-paginate-v2
+  - jekyll-paginate
 
 compress_html:
   ignore:
