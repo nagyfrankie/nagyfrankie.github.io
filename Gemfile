@@ -1,12 +1,13 @@
-source "https://rubygems.org"
-gem 'jekyll'
-gem 'jekyll-paginate'
-gem 'jekyll-sitemap'
-gem 'jekyll-relative-links'
-gem "tzinfo-data", "~> 1.2021"
+source 'https://rubygems.org'
 
-# windows specific
-gem 'wdm', '>= 0.1.0'
+group :jekyll_plugins do
+    gem 'github-pages'
+    gem 'jekyll-seo-tag'
+    gem 'jekyll-gist'
+    gem 'jekyll-feed'
+    gem 'jemoji'
+    gem "jekyll-paginate-v2", "~> 2.0"
+    gem "html-proofer"
+end
 
-# update ruby version
-gem 'webrick'
+gem "webrick", "~> 1.7"
